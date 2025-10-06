@@ -1,0 +1,389 @@
+/* frontend/static/css/style.css */
+
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* 头部 */
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.logo {
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  color: #a0aec0;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* 导航栏 */
+.nav {
+  background: rgba(22, 33, 62, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #00b4d8;
+  background: rgba(0, 180, 216, 0.1);
+}
+
+/* 主内容区 */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+  flex: 1;
+}
+
+.hero {
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.hero-title {
+  font-size: 2rem;
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+
+.logo-svg {
+    height: 160px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.2s ease;
+}
+
+/* 小屏幕适配 */
+@media (max-width: 640px) {
+    .logo-svg {
+        height: 40px;
+    }
+}
+
+.header:hover .logo-svg {
+    transform: scale(1.02);
+}
+
+/* 按钮 */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 180, 216, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #00b4d8;
+  border: 2px solid #00b4d8;
+}
+
+.btn-outline:hover {
+  background: #00b4d8;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* 页脚 */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #718096;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.highlight {
+  color: #00b4d8;
+  font-weight: 600;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* ==================== */
+/*     团队页面 - Accordion 样式    */
+/* ==================== */
+
+.accordion {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 调整手风琴组件的整体外观和边框颜色 */
+.accordion-item {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(60, 75, 95, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  background: rgba(20, 25, 40, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.accordion-toggle {
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(90deg, rgba(20, 40, 60, 0.8), rgba(25, 50, 80, 0.7));
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: left;
+}
+
+.accordion-toggle a, span{
+    color: white;
+}
+
+.accordion-toggle:hover {
+  background: linear-gradient(90deg, rgba(30, 60, 90, 0.9), rgba(40, 80, 120, 0.8));
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 130, 180, 0.25);
+}
+
+.accordion-panel {
+  padding: 1.5rem;
+  background: rgba(15, 20, 35, 0.4);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(100, 200, 255, 0.1);
+}
+
+/* 成员网格 */
+.member-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+/* 成员卡片 */
+.member-card {
+  background: rgba(30, 45, 70, 0.6);
+  border: 1px solid rgba(100, 200, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.member-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 180, 216, 0.25);
+  border-color: rgba(0, 180, 216, 0.4);
+  background: rgba(40, 60, 90, 0.7);
+}
+
+.member-card img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00b4d8;
+  transition: all 0.3s ease;
+}
+
+.member-card:hover img {
+  border-color: #00c8ff;
+  box-shadow: 0 0 12px rgba(0, 200, 255, 0.4);
+}
+
+.member-card .text-sm {
+  flex: 1;
+}
+
+.member-card .text-sm .font-medium {
+  color: white;
+  font-size: 1rem;
+}
+
+.member-card .text-sm .text-gray-400 {
+  font-size: 0.85rem;
+  color: grey;
+}
+
+.member-card .text-xs {
+  font-size: 0.75rem;
+  color: #a0aec0;
+  margin-top: 0.5rem;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* 卡片样式 */
+.card {
+  background: rgba(30, 45, 70, 0.8);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(100, 200, 255, 0.2);
+}
+
+/* 标题样式 */
+.text-midnight-cyan {
+  color: #00b4d8; /* 假设这是midnight cyan的颜色 */
+}
+
+/* 页面主标题 */
+h2.text-3xl {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* 段落文本 */
+.card p.text-xl {
+  color: #e2e8f0;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* 列表样式 */
+ul.space-y-3 {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li.flex.items-start.space-x-3.text-gray-200 {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.05); /* 轻微背景色增加可读性 */
+}
+
+li.flex.items-start.space-x-3.text-gray-200:hover {
+  background-color: rgba(0, 180, 216, 0.1); /* 悬停时背景颜色 */
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+  h2.text-3xl {
+    font-size: 2rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card p.text-xl {
+    font-size: 1rem;
+  }
+}

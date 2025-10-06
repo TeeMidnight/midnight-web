@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "name": "研讨会",
+    "description": "负责模式等开发，以及服务器开设，同时拥有执行其他所有内部组织的任务的权限，监督其他内部组织执行任务",
+    "permissions": "开发、管理、监督",
+    "members": [
+      {
+              "id": 101,
+              "name": "甘箨Bamcane",
+              "avatar": "/static/img/avatar_bamcane.png",
+              "role": "研讨会会长",
+              "joined": "2022-12-23",
+              "bio": "Teeworlds玩家",
+              "intro": "这是甘箨，然后没了"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "正义实现委员会",
+    "description": "负责管理服务器，处理玩家矛盾等",
+    "permissions": "管理、仲裁",
+    "members": [
+      {
+              "id": 201,
+              "name": "缟曦",
+              "avatar": "/static/img/avatar_124.jpg",
+              "role": "正义实现委员会会长",
+              "joined": "2025-08-17",
+              "bio": "CR感染模式继承者，似乎是二号吉祥物",
+              "intro": "常驻服务器管理qwq"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "风纪委员会",
+    "description": "监督除研讨会外的内部组织执行任务",
+    "permissions": "监督、审查",
+    "members": [
+      {
+              "id": 301,
+              "name": "暴民一只",
+              "avatar": "/static/img/avatar_mob.jpg",
+              "role": "风纪委员会会长",
+              "joined": "2025-09-12",
+              "bio": "似乎是三号吉祥物",
+              "intro": "这是一个苞米。嗯。兑。苞米"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "真理社",
+    "description": "协助并普及知识，传递公告，纠正游戏内错误观点，帮助某一模式新玩家学习玩法",
+    "permissions": "教育、宣传、引导",
+    "members": [
+      {
+              "id": 401,
+              "name": "Rallern16",
+              "avatar": "/static/img/avatar_rallernxvi.png",
+              "role": "真理社社长",
+              "joined": "2024-01-12",
+              "bio": "感染模式狙击手玩家",
+              "intro": "ACADEMY，CREATIVITY，UNILITY"
+      }
+    ]
+  }
+]

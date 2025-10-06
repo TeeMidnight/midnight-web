@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}理念与目标 - Mid·Night{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+  <div class="hero-content">
+    <p class="hero-title">
+        我们的理念与目标
+    </p>
+  </div>
+</div>
+
+<div class="card mb-10">
+    <h3 class="text-2xl font-bold text-midnight-cyan mb-4">我们的理念</h3>
+    {% for p in philosophy %}
+    <p class="text-xl text-gray-100">{{ p.content }}</p>
+    {% endfor %}
+</div>
+
+<div class="card">
+    <h3 class="text-2xl font-bold text-midnight-cyan mb-4">我们的目标</h3>
+    <ul class="space-y-3">
+        {% for g in goals %}
+        <li class="flex items-start space-x-3 text-gray-200">
+            <span>{{ g.description }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

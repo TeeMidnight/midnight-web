@@ -1,0 +1,44 @@
+<!-- frontend/templates/base.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{% block title %}Mid·Night{% endblock %}</title>
+    
+    <!-- 引入自定义 CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="icon" href="{{ url_for('static', filename='midnight_icon.png') }}" type="image/png">
+    <!-- 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-link {% if request.endpoint == 'index' %}active{% endif %}">首页</a>
+            <a href="/team" class="nav-link {% if request.endpoint == 'team' %}active{% endif %}">团队</a>
+            <a href="/about" class="nav-link {% if request.endpoint == 'about' %}active{% endif %}">理念与目标</a>
+            <a href="/status" class="nav-link {% if request.endpoint == 'status' %}active{% endif %}">服务器状态</a>
+        </div>
+    </nav>
+
+    <header class="header">
+        <a href="/" aria-label="Mid·Night 首页">
+            <img 
+                src="{{ url_for('static', filename='img/midnight_long.svg') }}" 
+                alt="Mid·Night" 
+                class="logo-svg"
+                onerror="this.onerror=null; this.src='https://via.placeholder.com/300x80?text=Mid·Night';"
+            >
+        </a>
+    </header>
+
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        &copy; 2025 <span class="highlight">Mid·Night</span>. 基于 FastAPI + Flask 构建.
+    </footer>
+</body>
+</html>
