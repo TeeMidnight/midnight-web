@@ -36,7 +36,7 @@ async def lifespan(app: FastAPI):
     yield
 
     print("应用正在关闭...")
-    await twinfo.close()
+    await twinfo.shutdown()
     print("会话已关闭。")
 
 # ======== 创建 FastAPI 实例 ========
