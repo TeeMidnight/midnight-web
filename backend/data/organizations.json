@@ -13,6 +13,15 @@
               "joined": "2022-12-23",
               "bio": "Teeworlds玩家",
               "intro": "这是甘箨，然后没了"
+      },
+      {
+              "id": 102,
+              "name": "辉夜",
+              "avatar": "/static/img/avatar_huinight.png",
+              "role": "研讨会重要成员",
+              "joined": "2025-06-12",
+              "bio": "子·夜不能没有辉夜就和子·夜不能没有甘箨（？",
+              "intro": "常驻htn大肘子（？）"
       }
     ]
   },
