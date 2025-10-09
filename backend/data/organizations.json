@@ -22,6 +22,15 @@
               "joined": "2025-06-12",
               "bio": "子·夜不能没有Huinight就像子·夜不能没有甘箨（？",
               "intro": "常驻htn大肘子（？）"
+      },
+      {
+              "id": 103,
+              "name": "缟曦",
+              "avatar": "/static/img/avatar_124.jpg",
+              "role": "前正义实现委员会会长",
+              "joined": "2025-08-17",
+              "bio": "CR感染模式继承者，是二号吉祥物",
+              "intro": "常驻服务器管理qwq"
       }
     ]
   },
@@ -32,13 +41,13 @@
     "permissions": "管理、仲裁",
     "members": [
       {
-              "id": 201,
-              "name": "缟曦",
-              "avatar": "/static/img/avatar_124.jpg",
+              "id": 103,
+              "name": "3",
+              "avatar": "/static/img/avatar_3.jpg",
               "role": "正义实现委员会会长",
-              "joined": "2025-08-17",
-              "bio": "CR感染模式继承者，似乎是二号吉祥物",
-              "intro": "常驻服务器管理qwq"
+              "joined": "2025-10-03",
+              "bio": "正义实现者",
+              "intro": "哈哈哈！巫毒不在我就是无敌的！（不是）"
       }
     ]
   },
