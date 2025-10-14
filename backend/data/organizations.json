@@ -16,15 +16,6 @@
       },
       {
               "id": 102,
-              "name": "Huinight",
-              "avatar": "/static/img/avatar_huinight.png",
-              "role": "研讨会重要成员",
-              "joined": "2025-06-12",
-              "bio": "子·夜不能没有Huinight就像子·夜不能没有甘箨（？",
-              "intro": "常驻htn大肘子（？）"
-      },
-      {
-              "id": 103,
               "name": "缟曦",
               "avatar": "/static/img/avatar_124.jpg",
               "role": "前正义实现委员会会长",
