@@ -32,13 +32,13 @@
     "permissions": "管理、仲裁",
     "members": [
       {
-              "id": 103,
-              "name": "3",
-              "avatar": "/static/img/avatar_3.jpg",
-              "role": "正义实现委员会会长",
-              "joined": "2025-10-03",
-              "bio": "正义实现者",
-              "intro": "哈哈哈！巫毒不在我就是无敌的！（不是）"
+              "id": 201,
+              "name": "五問",
+              "avatar": "/static/img/avatar_5wen.jpg",
+              "role": "正义实现委员会临时会长",
+              "joined": "2025-10-05",
+              "bio": "?????",
+              "intro": ""
       }
     ]
   },
