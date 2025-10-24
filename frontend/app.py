@@ -37,6 +37,11 @@ def status():
     servers = fetch_data("servers")
     return render_template("status.html", servers=servers)
 
+@app.route("/rules")
+def rules():
+    rules = fetch_data("rules")
+    return render_template("rules.html", rules=rules)
+
 # 错误处理
 @app.errorhandler(404)
 def not_found(e):

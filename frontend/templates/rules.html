@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}管理条例 - Mid·Night{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+  <div class="hero-content">
+    <p class="hero-title">
+        管理条例
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  {{ rules | safe }}
+</div>
+{% endblock %}

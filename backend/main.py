@@ -7,11 +7,14 @@ import os
 from . import twinfo
 from contextlib import asynccontextmanager
 
+import markdown
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 ORGANIZATIONS: dict
 PHILOSOPHY: dict
 GOALS: dict
+RULES: str
 
 
 def load_json(filename: str):
@@ -19,16 +22,22 @@ def load_json(filename: str):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
+def load_markdown(filename: str):
+    path = os.path.join(DATA_DIR, filename)
+    with open(path, "r", encoding="utf-8") as f:
+        return markdown.markdown(f.read())
+
 # ======== Lifespan 管理器 ========
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    global ORGANIZATIONS, PHILOSOPHY, GOALS
+    global ORGANIZATIONS, PHILOSOPHY, GOALS, RULES
     print("应用正在启动...")
 
     # 启动时执行
     ORGANIZATIONS = load_json("organizations.json")
     PHILOSOPHY = load_json("philosophy.json")
     GOALS = load_json("goals.json")
+    RULES = load_markdown("rules.md")
 
     await twinfo.init()
 
@@ -83,13 +92,9 @@ def get_philosophy():
 def get_goals():
     return GOALS
 
-@app.get("/api/info")
-def get_all_info():
-    return {
-        "organizations": ORGANIZATIONS,
-        "philosophy": PHILOSOPHY,
-        "goals": GOALS
-    }
+@app.get("/api/rules")
+def get_rules():
+    return RULES
 
 @app.get("/")
 def home():
