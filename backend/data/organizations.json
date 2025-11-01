@@ -16,8 +16,17 @@
       },
       {
               "id": 102,
+              "name": "Huinight",
+              "avatar": "/static/img/avatar_huinight.png",
+              "role": "研讨会重要成员",
+              "joined": "2025-06-12",
+              "bio": "这是辉奈特",
+              "intro": "常驻htn大肘子（？）"
+      },
+      {
+              "id": 103,
               "name": "缟曦",
-              "avatar": "/static/img/avatar_124.jpg",
+              "avatar": "/static/img/avatar_124.png",
               "role": "前正义实现委员会会长",
               "joined": "2025-08-17",
               "bio": "CR感染模式继承者，是二号吉祥物",
@@ -34,7 +43,7 @@
       {
               "id": 201,
               "name": "五問",
-              "avatar": "/static/img/avatar_5wen.jpg",
+              "avatar": "/static/img/avatar_5wen.png",
               "role": "正义实现委员会临时会长",
               "joined": "2025-10-05",
               "bio": "?????",
@@ -51,7 +60,7 @@
       {
               "id": 301,
               "name": "暴民一只",
-              "avatar": "/static/img/avatar_mob.jpg",
+              "avatar": "/static/img/avatar_mob.png",
               "role": "风纪委员会会长",
               "joined": "2025-09-12",
               "bio": "似乎是三号吉祥物",
