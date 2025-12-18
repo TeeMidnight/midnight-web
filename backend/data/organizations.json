@@ -2,8 +2,8 @@
   {
     "id": 1,
     "name": "研讨会",
-    "description": "负责模式等开发，以及服务器开设，同时拥有执行其他所有内部组织的任务的权限，监督其他内部组织执行任务",
-    "permissions": "开发、管理、监督",
+    "description": "负责模式等开发，以及服务器开设",
+    "permissions": "开发、开服",
     "members": [
       {
               "id": 101,
@@ -16,15 +16,6 @@
       },
       {
               "id": 102,
-              "name": "Huinight",
-              "avatar": "/static/img/avatar_huinight.png",
-              "role": "研讨会重要成员",
-              "joined": "2025-06-12",
-              "bio": "这是辉奈特",
-              "intro": "常驻htn大肘子（？）"
-      },
-      {
-              "id": 103,
               "name": "缟曦",
               "avatar": "/static/img/avatar_124.png",
               "role": "前正义实现委员会会长",
@@ -54,7 +45,7 @@
   {
     "id": 3,
     "name": "风纪委员会",
-    "description": "监督除研讨会外的内部组织执行任务",
+    "description": "监督除研讨会外的内部组织正确执行权限，讨论内部成员在社区矛盾中是否是严重过错方，如果是可以投票踢出，包括研讨会成员。（不只是风纪委员会内部投票，是整个子·夜内部，风纪委员会负责分析发现检举，最终由所有人决定）",
     "permissions": "监督、审查",
     "members": [
       {
