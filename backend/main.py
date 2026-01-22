@@ -4,7 +4,6 @@ from fastapi.openapi.docs import get_swagger_ui_html
 from fastapi.middleware.cors import CORSMiddleware
 import json
 import os
-from . import twinfo
 from contextlib import asynccontextmanager
 
 import markdown
@@ -39,15 +38,6 @@ async def lifespan(app: FastAPI):
     GOALS = load_json("goals.json")
     RULES = load_markdown("rules.md")
 
-    await twinfo.init()
-
-    print("应用初始化完成，已加载数据并建立会话。")
-    yield
-
-    print("应用正在关闭...")
-    await twinfo.shutdown()
-    print("会话已关闭。")
-
 # ======== 创建 FastAPI 实例 ========
 app = FastAPI(
     title="Mid·Night Teeworlds 官网 API",
@@ -75,10 +65,6 @@ async def custom_swagger_ui():
         swagger_css_url="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css",
         swagger_favicon_url="https://fastapi.tiangolo.com/img/favicon.png"
     )
-
-@app.get("/api/servers")
-async def get_server_status():
-    return await twinfo.get_server_list()
 
 @app.get("/api/organizations")
 def get_organizations():
