@@ -38,6 +38,10 @@ async def lifespan(app: FastAPI):
     GOALS = load_json("goals.json")
     RULES = load_markdown("rules.md")
 
+    print("应用初始化完成，已加载数据并建立会话。")
+    yield
+    print("会话已关闭。")
+
 # ======== 创建 FastAPI 实例 ========
 app = FastAPI(
     title="Mid·Night Teeworlds 官网 API",
